@@ -15,7 +15,7 @@ let trends = [];
 
 googleTrends.dailyTrends({
     trendDate: new Date(),
-    geo: 'US'
+    geo: ["US", "IN", "CN", "GB"]
 }, (err, results) => {
     if (err) {
         console.log(err);

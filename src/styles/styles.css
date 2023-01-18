@@ -1,0 +1,156 @@
+.header {
+  width: 70vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: white;
+  z-index: 10;
+  background-color: aqua;
+}
+
+.header-adjuster {
+  width: 70vw;
+  height: 10vh;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+.search {
+  display: flex;
+}
+
+.search-input {
+  height: 1.5rem;
+  border: solid 1px rgb(182, 182, 182);
+  padding-left: 0.5rem;
+  letter-spacing: 0.1rem;
+}
+
+.search-btn {
+  width: 3rem;
+  height: 1.5rem;
+  border: none;
+}
+
+.search-btn:hover {
+  cursor: pointer;
+}
+
+.gif-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 2rem;
+  align-items: center;
+  place-items: center;
+}
+
+.gif-container {
+  border-radius: 0.5rem;
+  width: 15rem;
+  height: 15rem;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 0;
+}
+
+.gif-image {
+  width: 100%;
+  z-index: 1;
+}
+
+.navigator-container {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigator {
+  width: 18%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navigator-down {
+  justify-content: end;
+}
+
+@media (max-width: 500px) {
+  .app {
+    width: 100%;
+  }
+  .header {
+    width: 100vw;
+    padding: 0 6%;
+  }
+  .gif-grid {
+    grid-template-columns: auto;
+  }
+}
+@media (min-width: 501px) and (max-width: 1000px) {
+  .header-container {
+    padding: 0 2rem;
+    width: 100%;
+    background-color: blue;
+  }
+  .gif-grid {
+    grid-template-columns: auto auto;
+  }
+  body {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (min-width: 1001px) {
+  .gif-grid {
+    grid-template-columns: auto auto auto;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Product Sans";
+}
+
+.app {
+  background-color: red;
+  min-height: 100vh;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  block-size: -webkit-fit-content;
+  block-size: -moz-fit-content;
+  block-size: fit-content;
+}
+
+button {
+  border: none;
+  background-color: rgb(209, 209, 209);
+  padding: 2px;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}/*# sourceMappingURL=styles.css.map */

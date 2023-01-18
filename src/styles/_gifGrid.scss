@@ -1,0 +1,53 @@
+.gif-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2rem;
+    align-items: center;
+    place-items: center;
+}
+
+
+.gif-container {
+    border-radius: 0.5rem;
+
+    width: 15rem;
+    height: 15rem;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.loader {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 0;
+}
+
+.gif-image {
+    width: 100%;
+    z-index: 1;
+}
+
+
+.navigator-container {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigator {
+    width: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.navigator-down {
+    justify-content: end;
+}

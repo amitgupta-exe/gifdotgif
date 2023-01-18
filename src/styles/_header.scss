@@ -1,0 +1,53 @@
+$header-width: 70vw;
+$header-height: 10vh;
+
+
+
+.header{
+    width: $header-width;
+    height: $header-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;   
+    background-color: white;
+    z-index: 10;
+    background-color: aqua;
+}
+
+.header-adjuster{
+    width: $header-width;
+    height: $header-height;
+}
+
+.logo{
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: black;
+}
+
+.search{
+   display: flex;
+}
+
+.search-input{
+    height: 1.5rem;
+    border: solid 1px rgb(182, 182, 182);
+    padding-left: 0.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.search-btn{
+    width: 3rem;
+    height: 1.5rem;
+    border: none;
+    
+
+}
+
+.search-btn:hover{
+    cursor: pointer;
+}
+
+

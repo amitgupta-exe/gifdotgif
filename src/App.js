@@ -1,35 +1,16 @@
-import React, { useEffect, useState, useContext } from 'react';
-import './App.css';
-import axios from 'axios';
+import React from 'react';
+import './styles/styles.css'
+
 import Header from './components/Header';
-import Home from './components/Home';
-import NoPage from './components/NoPage';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Search from './components/Search';
-
-
-import { Context } from './context';
-
+import Gifs from './components/Gifs';
 
 
 const App = () => {
-
-  const {search} = useContext(Context);
-
-
-
   return (
-
-    <BrowserRouter>
+    <main className='app'>
       <Header />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/search' element={<Search />} />
-        <Route path='/search/:query' element={<Search/>}/>
-        <Route path="*" element={<NoPage />} />
-      </Routes>
-    </BrowserRouter>
-
+      <Gifs />
+    </main>
   )
 }
 

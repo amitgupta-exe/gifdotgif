@@ -1,5 +1,5 @@
-import React, { useContext, useRef, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import React, { useContext, useEffect, useRef } from 'react';
+
 import { Context } from '../context';
 
 
@@ -7,22 +7,30 @@ const Header = () => {
 
     const query = useRef("");
 
-    const { search, setSearch, fetchGifs, setAllGifs } = useContext(Context);
+    const { search, setSearch, giphyAPI } = useContext(Context);
+
+    const handleSubmit = () => {
+        setSearch(query.current.value);
+    }
+
+    useEffect(() => {
+        giphyAPI();
+    }, [search]);
+
 
     return (
-        <main style={{ display: "flex" }}>
-            <Link to="/">
-                <h1>
-                    UffyeGiff
-                </h1>
-            </Link>
+        <main className='header-container'>
 
-            <form >
-                <input ref={query}  type="text" />
-                <Link to="/search">
-                    <button onClick={() => { fetchGifs(); setSearch(query.current.value) }} >Search</button>
-                </Link>
-            </form>
+            <header className='header'>
+                <a href="/" className='logo'>gif.gif</a>
+                <form className='search' onSubmit={(e) => { e.preventDefault(); }}>
+                    <input className='search-input' ref={query} type="text" />
+                    <button className='search-btn' onClick={() => { handleSubmit() }}>Search</button>
+                </form>
+            </header>
+
+            <div className="header-adjuster"></div>
+
         </main>
     )
 }
