@@ -2,7 +2,6 @@
 @import "./gifGrid";
 
 
-@import './mobileMediaQuery';
 
 
 * {
@@ -12,15 +11,9 @@
     font-family: "Product Sans";
 }
 
-.app{
-    background-color: red;
-    min-height: 100vh;
-    width: fit-content;
-    block-size: fit-content;
+body{
+    padding: 0 4rem
 }
-
-
-
 
 button {
     border: none;
@@ -32,3 +25,7 @@ button:hover {
     cursor: pointer;
     transform: scale(1.05);
 }
+   
+
+
+@import './mobileMediaQuery';

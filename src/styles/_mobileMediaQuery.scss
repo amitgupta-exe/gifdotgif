@@ -1,11 +1,25 @@
 @media (max-width: 500px) {
 
-    .app{
+    .navigator-up,.navigator-down{
+        flex-direction: column;
+        justify-content: space-evenly;
+
+    }
+
+    .navigator{
+        width: 50vw
+    }
+
+    body{
+        padding: 0 2rem;
+    }
+
+    .app {
         width: 100%;
     }
+
     .header {
-        width: 100vw;
-        padding: 0 6%;
+        width: 90%;
     }
 
     .gif-grid {
@@ -15,14 +29,19 @@
 
 @media (min-width: 501px) and (max-width: 1000px) {
 
-    .app{
+    .navigator-up, .navigator-down{
+        width: 70vw;
+    }
 
+    .navigator{
+        width: 13vw
+    }
+    .header {
+        width: 80%;
     }
 
     .header-container {
-        padding: 0 2rem;
         width: 100%;
-        background-color: blue;
     }
 
 
